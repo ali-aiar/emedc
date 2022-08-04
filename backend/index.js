@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 try {
-  await db.authenticate();
+  db.authenticate();
   console.log("Database connected");
 
   // await Users.sync();
@@ -29,5 +29,6 @@ app.use(cors({ credentials: true, origin:true/* process.env.ORIGIN */})); //sesu
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running at port ${port}`));
