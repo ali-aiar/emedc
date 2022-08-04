@@ -10,8 +10,13 @@ dotenv.config();
 const app = express();
 
 try {
-  db.authenticate();
-  console.log("Database connected");
+  db.authenticate()
+    .then(() => {
+      console.log("Connection has been established successfully.");
+    })
+    .catch((err) => {
+      console.error("Unable to connect to the database:", err);
+    });
 
   // await Users.sync();
   // await Petugas.sync();
@@ -25,7 +30,7 @@ try {
   console.log(error);
 }
 
-app.use(cors({ credentials: true, origin:true/* process.env.ORIGIN */})); //sesuaikan
+app.use(cors({ credentials: true, origin: true /* process.env.ORIGIN */ })); //sesuaikan
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
