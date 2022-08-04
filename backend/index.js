@@ -50,12 +50,12 @@ try {
   Klinis_Pasien.sync()
     .then(() => {})
     .catch((err) => {});
-    
+
 } catch (error) {
   console.log(error);
 }
 
-app.use(cors({ credentials: true, origin: true /* process.env.ORIGIN */ })); //sesuaikan
+app.use(cors({ credentials: true, origin: process.env.ORIGIN })); //sesuaikan
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
