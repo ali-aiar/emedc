@@ -1,0 +1,947 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Pasien",
+						"name": "pasien",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Petugas",
+						"name": "petugasPendaftaran",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Petugas",
+						"name": "petugasCheckUp",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "spesialisasi",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Dokter",
+						"name": "dokter",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "noKunjungan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "keluhan",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.LaporanKunjungan",
+						"name": "laporanKunjungan",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "beratBadan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tinggiBadan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tekananDarah",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.PemeriksaanCheckup",
+						"name": "pemeriksaanCheckup",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "hasilPemeriksaaan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "resepDokter",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "catatanLain",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.PemeriksaanDokter",
+						"name": "pemeriksaanDokter",
+						"type": "tuple"
+					}
+				],
+				"name": "create",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "data",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Pasien",
+						"name": "Pasien",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Petugas",
+						"name": "PetugasPendaftaran",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Petugas",
+						"name": "PetugasCheckUp",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "nama",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "NIK",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "tanggalLahir",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "tempatLahir",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "kodePegawai",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "spesialisasi",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "jenisKelamin",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.Dokter",
+						"name": "Dokter",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "noKunjungan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "keluhan",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.LaporanKunjungan",
+						"name": "LaporanKunjungan",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "beratBadan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tinggiBadan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "tekananDarah",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.PemeriksaanCheckup",
+						"name": "PemeriksaanCheckup",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "hasilPemeriksaaan",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "resepDokter",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "catatanLain",
+								"type": "string"
+							}
+						],
+						"internalType": "struct DataKlinis.PemeriksaanDokter",
+						"name": "PemeriksaanDokter",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "idNext",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latestData",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Pasien",
+								"name": "Pasien",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Petugas",
+								"name": "PetugasPendaftaran",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Petugas",
+								"name": "PetugasCheckUp",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "spesialisasi",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Dokter",
+								"name": "Dokter",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "noKunjungan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "keluhan",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.LaporanKunjungan",
+								"name": "LaporanKunjungan",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "beratBadan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "tinggiBadan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "tekananDarah",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.PemeriksaanCheckup",
+								"name": "PemeriksaanCheckup",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "hasilPemeriksaaan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "resepDokter",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "catatanLain",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.PemeriksaanDokter",
+								"name": "PemeriksaanDokter",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct DataKlinis.ClinicalData",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "readAll",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Pasien",
+								"name": "Pasien",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Petugas",
+								"name": "PetugasPendaftaran",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Petugas",
+								"name": "PetugasCheckUp",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "nama",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "NIK",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "tanggalLahir",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "tempatLahir",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "kodePegawai",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "spesialisasi",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "jenisKelamin",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.Dokter",
+								"name": "Dokter",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "noKunjungan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "keluhan",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.LaporanKunjungan",
+								"name": "LaporanKunjungan",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "beratBadan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "tinggiBadan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "tekananDarah",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.PemeriksaanCheckup",
+								"name": "PemeriksaanCheckup",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "hasilPemeriksaaan",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "resepDokter",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "catatanLain",
+										"type": "string"
+									}
+								],
+								"internalType": "struct DataKlinis.PemeriksaanDokter",
+								"name": "PemeriksaanDokter",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct DataKlinis.ClinicalData[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"frontend\\src\\components\\contracts\\DataKlinis.sol": "DataKlinis"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"frontend\\src\\components\\contracts\\DataKlinis.sol": {
+			"keccak256": "0x23256a02219fc7aa2a99b8d4e4b27b9715add91f19a76d1c142bab03b03ab4d1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://266b27cfed00659268f3b1f454dc8907de235da99c8ea9ed2bcb724d3baea942",
+				"dweb:/ipfs/QmQZ1FxUWvMhyqit3529kLKy53z25zMHYyewxUF7PmS4Mb"
+			]
+		}
+	},
+	"version": 1
+}

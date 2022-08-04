@@ -1,0 +1,88 @@
+get http://localhost:5000/pasiens
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJhIiwiZW1haWwiOiJhQGVtYWlsIiwiaWF0IjoxNjM5NTk1OTMzLCJleHAiOjE2Mzk1OTc3MzN9.-SE4bhV34T0pCtge-duXBWroqj85QHLQV3nby--bK74
+
+###
+post http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "a",
+    "email": "email2@gmail.com",
+    "password": "kkk",
+    "confirmPassword": "kkk",
+    "NIK": "185150",
+    "tanggalLahir": "2012-04-23T18:25:43.511Z",
+    "tempatLahir": "tegal",
+    "kodePegawai": "123456",
+    "jenisKelamin": "Pria",
+    "spesialisasi": "mata"
+}
+
+###
+post http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "a",
+    "email": "email3@gmail.com",
+    "password": "asdasd3",
+    "confirmPassword": "asdasd3",
+    "NIK": "185150",
+    "tanggalLahir": "2012-04-23T18:25:43.511Z",
+    "tempatLahir": "tegal",
+    "kodePegawai": "123456",
+    "jenisKelamin": "Pria"
+}
+
+###
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@admin",
+    "password": "admin"
+}
+
+###
+get http://localhost:5000/token
+
+###
+delete http://localhost:5000/logout
+
+###
+post http://localhost:5000/pendaftaran
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhIiwiZW1haWwiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE2Mzk0OTk3MjAsImV4cCI6MTYzOTUwMTUyMH0.EhGu5bZHtOSa4nW3XcdmX1eoyNRAoH7exFQZ4A6cApo
+Content-Type: application/json
+
+{
+    "pasien": {
+        "nama" : "as",
+        "NIK" : "185"
+    },
+    "keluhan": "sakit perut",
+    "kodeDokter": "123456"
+}
+
+###
+patch http://localhost:5000/checkup
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsIm5hbWUiOiJhIiwiZW1haWwiOiJlbWFpbDNAZ21haWwuY29tIiwiaWF0IjoxNjM5NDk5NDIyLCJleHAiOjE2Mzk1MDEyMjJ9.G_51lHi5L38CbQog4juDEK-eUVEX3QHUF11obvcYN70
+Content-Type: application/json
+
+{
+    "noKunjungan": "202112140001",
+    "beratBadan" : "79.5 kg",
+    "tinggiBadan": "181.5 cm",
+    "tekananDarah": "80/110"
+}
+
+###
+patch http://localhost:5000/pemeriksaan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsIm5hbWUiOiJhIiwiZW1haWwiOiJlbWFpbDJAZ21haWwuY29tIiwiaWF0IjoxNjM5NDk5NTE1LCJleHAiOjE2Mzk1MDEzMTV9.XRZBFF8ua-s4UPPhAm6olzsTtwQApgGgQegISFCNi9k
+Content-Type: application/json
+
+{
+    "noKunjungan": "202112140001",
+    "hasilPemeriksaan" : "bagus",
+    "resepDokter":"asdas",
+    "catatanLain":"sdfsdf"
+}
