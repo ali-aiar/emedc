@@ -4,6 +4,14 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import db from "./config/db.js";
 import router from "./routes/routes.js";
+import Users from "./models/users_model.js";
+import Petugas from "./models/petugas_model.js";
+import Dokter from "./models/dokter_model.js";
+import Pasien from "./models/pasien_model.js";
+import Data_Klinis from "./models/dataKlinis_model.js";
+import Klinis_Petugas from "./models/Klinis_Petugas.js";
+import Klinis_Dokter from "./models/Klinis_Dokter.js";
+import Klinis_Pasien from "./models/Klinis_Pasien.js";
 
 dotenv.config();
 
@@ -18,14 +26,31 @@ try {
       console.error("Unable to connect to the database:", err);
     });
 
-  // await Users.sync();
-  // await Petugas.sync();
-  // await Dokter.sync();
-  // await Pasien.sync();
-  // await Data_Klinis.sync();
-  // await Klinis_Petugas.sync();
-  // await Klinis_Dokter.sync();
-  // await Klinis_Pasien.sync();
+  Users.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Petugas.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Dokter.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Pasien.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Data_Klinis.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Klinis_Petugas.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Klinis_Dokter.sync()
+    .then(() => {})
+    .catch((err) => {});
+  Klinis_Pasien.sync()
+    .then(() => {})
+    .catch((err) => {});
+    
 } catch (error) {
   console.log(error);
 }
