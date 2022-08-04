@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
   const history = useHistory();
-  console.log(process.env)
+  // console.log(process.env)
   const Auth = async (e) => {
     e.preventDefault();
     try {

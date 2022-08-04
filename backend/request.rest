@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ###
-post http://localhost:5000/users
+post http://emedc-express3-git-emedc.apps.ap46a.prod.ole.redhat.com:5000/users
 Content-Type: application/json
 
 {
